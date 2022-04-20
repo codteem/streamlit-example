@@ -31,7 +31,7 @@ def main():
     
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
-    st.success('The output is {}'.format(result))
+        st.success('The output is {}'.format(result))
 
 if __name__=='__main__':
     main()   
