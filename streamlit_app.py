@@ -36,35 +36,7 @@ def classify(sent):
   hate_level=" "
       
   offensive_label=offensive.predict_label(sent)
-  
-
-#   if offensive_label=="Offensive":
-#           hate_label = hate.predict_label(sent)
-#           if hate_label=="Religion":
-#               hate_level=rel.predict_label(sent)
-#           elif hate_label=="Ethnicity":
-#               hate_level=eth.predict_label(sent)
-#           elif hate_label=="National Origin":
-#               hate_level=nat.predict_label(sent)
-#           elif hate_label=="Not Hate Speech":
-#               hate_label="Not-Hate-Speech"
-#               hate_level="Not-Hate-Speech"
-
-#           if hate_level=="Symbolization":
-#             hate_level = "Less Intense"
-#           elif hate_level == "Attribution":
-#             hate_level = "Moderately Intense"
-#           elif hate_level == "Insult":
-#             hate_level = "Highly Intense"
-#   else:
-#         offensive_label=offensive_label
-#         hate_label="Not-Hate-Speech"
-#         hate_level="Not-Hate-Speech"
-      
-        
-#   print ("offense Category = ", offensive_label)
-#   print ("Hate Speech Target Category = ", hate_label)
-#   print ("Hate Speech Intensity = ", hate_level)
+   
   return offensive_label
 
 def main():
@@ -77,7 +49,8 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     urdu_text = st.text_input("Urdu Text","Type Here")
     
-    off_label = classify("قادیانیوں پہ لعنت ھو")
+    sentence="قادیانیوں پہ لعنت ھو"
+    off_label = classify(sentence)
 
     result=""
     
