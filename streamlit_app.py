@@ -79,7 +79,7 @@ def main():
     
     off_label = classify(str(urdu_text))
 
-    result=off_label
+    result=""
     
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
