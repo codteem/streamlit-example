@@ -11,7 +11,7 @@ import codecs
 import string
 import pandas as pd
 import os
-from . import segmenter
+import segmenter
 #import segmenter
 
 def build_data(s):
