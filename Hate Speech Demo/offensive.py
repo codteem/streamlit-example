@@ -19,7 +19,7 @@ import preprocess_sentence
 #from Implementation.featurewise import SkipGramVectorizer
 
 #testing_file = "Data/data/eth_test" 
-features = "charngrams"
+features = "word2vec"
 dirname = "Offensive"
 label="LR"
 w2v_file = "w2v/w2v_300.bin"
