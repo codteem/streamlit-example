@@ -7,9 +7,11 @@ import pickle
 import sklearn
 from PIL import Image
 
-# py_file_location = "/content/drive/My Drive/Hate Speech Demo/"
-# sys.path.append(os.path.abspath(py_file_location))
-from Hate Speech Demo import preprocess_sentence
+import os
+import sys
+py_file_location = "/Hate Speech Demo/"
+sys.path.append(os.path.abspath(py_file_location))
+import preprocess_sentence
 
 # import offensive
 # import hate,rel,eth,nat,offensive
