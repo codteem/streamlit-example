@@ -11,7 +11,7 @@ import os
 import sys
 py_file_location = "/Hate Speech Demo/"
 sys.path.append(os.path.abspath(py_file_location))
-from HateSpeechDemo import preprocess_sentence
+from HateSpeechDemo import fileprocessing
 
 # import offensive
 # import hate,rel,eth,nat,offensive
