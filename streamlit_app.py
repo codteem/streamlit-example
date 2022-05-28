@@ -77,7 +77,7 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     urdu_text = st.text_input("Urdu Text","Type Here")
     
-    off_label = classify(urdu_text)
+    off_label = classify(str(urdu_text))
 
     result=off_label
     
