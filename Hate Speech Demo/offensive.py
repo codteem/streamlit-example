@@ -8,7 +8,7 @@ Created on Sat Apr 14 19:52:20 2018
 import os
 import pickle
 from pathlib import Path
-from . import preprocess_sentence
+import preprocess_sentence
 #from SkipgramGenerator import SkipGramVectorizer
 #from slurs import get_slurterms
 #from Embedding_Generator import TfidfEmbeddingVectorizer
