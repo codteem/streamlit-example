@@ -48,10 +48,10 @@ def main():
     st.markdown(html_temp,unsafe_allow_html=True)
     urdu_text = st.text_input("Urdu Text","Type Here")
     
-    sentence="قادیانیوں پہ لعنت ھو"
-    off_label = classify(sentence)
+    
+    off_label = classify(urdu_text)
 
-    result=""
+    result=off_label
     
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
