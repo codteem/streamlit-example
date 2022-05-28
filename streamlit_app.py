@@ -4,6 +4,7 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import pickle
+import sklearn
 from PIL import Image
 
 # pickle_in = open("classifier.pkl","rb")
