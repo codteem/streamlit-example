@@ -76,12 +76,14 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     urdu_text = st.text_input("Urdu Text","Type Here")
+    
+    off_label = classify(urdu_text)
 
-    result=urdu_text
+    result=off_label
     
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
-        st.success('The output is {}'.format(result))
+        st.success('The sentence is {}'.format(result))
 
 if __name__=='__main__':
     main()   
