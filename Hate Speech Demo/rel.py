@@ -16,7 +16,7 @@ from pathlib import Path
 #from SkipgramGenerator import SkipGramVectorizer
 
 #testing_file = "Data/data/eth_test" 
-features = "wordngrams+charngrams"
+features = "wordngrams"
 dirname = "Religion"
 label="LR"
 w2v_file = "w2v/w2v_300.bin"
@@ -50,14 +50,14 @@ def predict_label(sentence):
     #sentence=["قادیانی کافر ہیں"]
     predicted = clf.predict(sentence)
     #bin_predicted=label_binarize(predicted, classes=[0,1,2,3])
-    """if predicted==0:
+    if predicted==0:
         predicted="Not Hate Speech"
     elif predicted==1:
         predicted="Attribution"
     elif predicted==2:
         predicted="Insult"
     elif predicted==3:
-        predicted="Symbolization"""
+        predicted="Symbolization"
     return predicted
 
 
