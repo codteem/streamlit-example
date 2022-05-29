@@ -27,17 +27,11 @@ from sklearn.model_selection import KFold, cross_val_score, cross_val_predict, c
 from pathlib import Path
 
 
-#import sys
-#sys.path.insert(0, "E:/Project/")
-#print (sys.path)
-
-
-#testing_file = "Data/data/eth_test" 
-features = "charngrams"
+features = "word2vec"
 dirname = "Hate Category"
 label="LR"
 w2v_file = "w2v/w2v_300.bin"
-ft_file = "w2v/ft_300_wn2.bin"    
+
     
 encoding="utf-8"
         
@@ -58,7 +52,7 @@ def predict_label(sentence):
         os.makedirs(outputdir)"""
         
         
-    modelname=label+"_"+dirname+"_"+features        
+    modelname="LR_Hate_word2vec"        
     
     clf=load_model(outputdir, modelname)
     
