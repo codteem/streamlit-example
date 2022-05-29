@@ -35,8 +35,13 @@ def classify(sent):
   hate_level=" "
       
   offensive_label=offensive.predict_label(sent)
+  if offensive_label=="Offensive":
+      hate_label = hate.predict_label(sent)
+  else:
+      hate_label = "Not Hate Speech"
+          
    
-  return offensive_label
+  return offensive_label, hate_label
 
 def main():
     st.title("Toxicity Detection Urdu")
@@ -49,13 +54,13 @@ def main():
     urdu_text = st.text_input("Urdu Text","Type Here")
     
     
-    off_label = classify(urdu_text)
+    off_label, hate_label = classify(urdu_text)
 
-    result=off_label
-    
+        
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
-        st.success('The sentence is {}'.format(result))
+        st.success('The sentence is {}'.format(off_label))
+        st.success('The sentence is {}'.format(hate_label))
 
 if __name__=='__main__':
     main()   
