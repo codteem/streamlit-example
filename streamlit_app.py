@@ -36,9 +36,9 @@ def classify(sent):
       
   offensive_label=offensive.predict_label(sent)
   if offensive_label=="Offensive":
-      hate_label = hate.predict_label(sent)
+          hate_label = hate.predict_label(sent)
     
-      if hate_label=="Religion":
+          if hate_label=="Religion":
               hate_level=rel.predict_label(sent)
           elif hate_label=="Ethnicity":
               hate_level=eth.predict_label(sent)
