@@ -39,13 +39,10 @@ def classify(sent):
           hate_label = hate.predict_label(sent)
     
           if hate_label=="Religion":
-              hate_label = "Hate Speech targeted at Religion"
               hate_level=rel.predict_label(sent)
           elif hate_label=="Ethnicity":
-              hate_label = "Hate Speech targeted at Ethnicity"
               hate_level=eth.predict_label(sent)
           elif hate_label=="National Origin":
-              hate_label = "Hate Speech targeted at National Origin"
               hate_level=nat.predict_label(sent)
           elif hate_label=="Not Hate Speech":
               hate_label="Not-Hate-Speech"
