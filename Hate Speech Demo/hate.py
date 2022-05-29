@@ -5,19 +5,15 @@ Created on Sat Apr 14 19:52:20 2018
 @author: ETsham
 """
 
-import gensim
 import codecs
 import numpy as np
 import os
 import pickle
-from gensim.models.word2vec import Word2Vec
 from sklearn.pipeline import Pipeline, FeatureUnion
 from collections import defaultdict
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import metrics
 import functools
-from nltk.util import skipgrams
-#from pyfasttext import FastText
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn import svm
 from sklearn.linear_model import LogisticRegression
