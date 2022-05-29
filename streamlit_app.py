@@ -73,13 +73,14 @@ def main():
     urdu_text = st.text_input("Urdu Text","Type Here")
     
     
-    off_label, hate_label = classify(urdu_text)
+    off_label, hate_label, hate_level = classify(urdu_text)
 
         
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
         st.success('The sentence is {}'.format(off_label))
         st.success('The sentence is {}'.format(hate_label))
+        st.success('The sentence is {}'.format(hate_level))
 
 if __name__=='__main__':
     main()   
