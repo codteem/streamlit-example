@@ -36,17 +36,20 @@ def classify(sent):
       
   offensive_label=offensive.predict_label(sent)
   if offensive_label=="Offensive":
-          hate_label = hate.predict_label(sent)
+          hate_cat = hate.predict_label(sent)
     
-          if hate_label=="Religion":
+          if hate_cat=="Religion":
+              hate_label = "Hate Speech"
               hate_level=rel.predict_label(sent)
-          elif hate_label=="Ethnicity":
+          elif hate_cat=="Ethnicity":
+              hate_label = "Hate Speech"
               hate_level=eth.predict_label(sent)
-          elif hate_label=="National Origin":
+          elif hate_cat=="National Origin":
+              hate_label = "Hate Speech"
               hate_level=nat.predict_label(sent)
-          elif hate_label=="Not Hate Speech":
-              hate_label="Not-Hate-Speech"
-              hate_level="Not-Hate-Speech"
+          elif hate_cat=="Not Hate Speech":
+              hate_label="Not Hate Speech"
+              hate_level="Not Hate Speech"
 
           if hate_level=="Symbolization":
             hate_level = "Less Intense"
@@ -60,7 +63,7 @@ def classify(sent):
       hate_level = "Not Hate Speech"
           
    
-  return offensive_label, hate_label, hate_level
+  return offensive_label, hate_label, hate_cat, hate_level
 
 def main():
     st.title("Toxicity Detection Urdu")
@@ -73,16 +76,18 @@ def main():
     urdu_text = st.text_input("Urdu Text","Type Here")
     
     
-    off_label, hate_label, hate_level = classify(urdu_text)
+    off_label, hate_label, hate_cat, hate_level = classify(urdu_text)
 
         
     if st.button("Predict"):
         # result=predict_note_authentication(variance,skewness,curtosis,entropy)
         st.success('The sentence is {}'.format(off_label))
-        st.write("Hate Speech Category")
-        st.success(hate_label)
-        st.write("Hate Speech Level")
-        st.success(hate_level)
+        st.success('The sentence is {}'.format(hate_label))
+        if hate_label != "Not Hate Speech":
+            st.write("Hate Speech Category")
+            st.success(hate_cat)
+            st.write("Hate Speech Level")
+            st.success(hate_level)
 
 if __name__=='__main__':
     main()   
