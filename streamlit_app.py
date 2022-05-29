@@ -60,6 +60,7 @@ def classify(sent):
             
   else:
       hate_label = "Not Hate Speech"
+      hate_cat = "Not Hate Speech"
       hate_level = "Not Hate Speech"
           
    
