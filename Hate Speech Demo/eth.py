@@ -2,7 +2,7 @@
 """
 Created on Sat Apr 14 19:52:20 2018
 
-@author: ETsham
+
 """
 
 import os
@@ -47,14 +47,14 @@ def predict_label(sentence):
     #sentence=["قادیانی کافر ہیں"]
     predicted = clf.predict(sentence)
     #bin_predicted=label_binarize(predicted, classes=[0,1,2,3])
-    """if predicted==0:
+    if predicted==0:
         predicted="Attribution"
     elif predicted==1:
         predicted="Insult"
     elif predicted==2:
         predicted="Symbolization"
     elif predicted==3:
-        predicted="Not Hate Speech"""
+        predicted="Not Hate Speech"
     return predicted
 
 
