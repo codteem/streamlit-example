@@ -56,7 +56,7 @@ def predict_label(sentence):
     #sentence=["قادیانی کافر ہیں"]
     predicted = clf.predict(sentence)
     #bin_predicted=label_binarize(predicted, classes=[0,1,2,3])
-    """if predicted==0:
+    if predicted==0:
         predicted="Ethnicity"
     elif predicted==1:
         predicted="National Origin"
@@ -64,13 +64,8 @@ def predict_label(sentence):
         predicted="Religion"
     elif predicted==3:
         predicted="Not Hate Speech"
-    """
+    
     return predicted
 
 
-"""sentence = input("Enter the sentence")
-sentence=[sentence]"""
-sentence="قادیانی کافر ہیں"
-sentence=[sentence]
-p=predict_label(sentence)
-print (p)
+
