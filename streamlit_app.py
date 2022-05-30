@@ -57,6 +57,9 @@ def classify(sent):
             hate_level = "Moderately Intense"
           elif hate_level == "Insult":
             hate_level = "Highly Intense"
+          elif hate_level == "Not Hate Speech":
+            hate_label = "Not Hate Speech"
+            hate_cat=="Not Hate Speech"
             
   else:
       hate_label = "Not Hate Speech"
